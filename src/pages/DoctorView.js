@@ -1,7 +1,5 @@
-import React, { useState } from "react";
 import { usePatient } from "../contexts";
 import { PatientCard } from "../components";
-import { data } from "autoprefixer";
 export const DoctorView = () => {
   const { patientList, statusHandler } = usePatient();
 
