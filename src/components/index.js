@@ -1,4 +1,6 @@
 export { Header } from "./Header";
 export { Footer } from "./Footer";
-export { DocCard } from "./DocCard";
+export { Card } from "./Card";
 export { Modal } from "./Modal";
+export { PatientCard } from "./PatientCard";
+export { DocCard } from "./DocCard";

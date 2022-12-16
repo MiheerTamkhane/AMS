@@ -1,5 +1,5 @@
-import React from "react";
-import { DocCard } from "../components";
+import { useState } from "react";
+import { Card, DocCard } from "../components";
 import { usePatient } from "../contexts";
 export const PatientView = () => {
   const { patientList } = usePatient();
@@ -44,22 +44,27 @@ export const PatientView = () => {
       },
     },
   ];
+
   return (
-    <div className="w-full m-4">
-      <div className="">
-        <h2>Doctors Available</h2>
-        <div className="flex m-2 gap-2">
+    <div className="w-full mt-6">
+      <div>
+        <h2 className="mx-auto">Available Doctors</h2>
+        <div className="flex mt-2 gap-4 flex-wrap justify-center md:justify-start">
           {docData.map((doc) => (
-            <DocCard key={doc.id} {...doc} docsCard={true} />
+            <DocCard key={doc.id} {...doc} />
           ))}
         </div>
       </div>
-      <div>
+      <div className="mt-6">
         <h2>Your Appointments</h2>
-        <div className="flex gap-2">
-          {patientList.map((pat) => (
-            <DocCard key={pat.id} {...pat} patientsCard={true} />
-          ))}
+        <div className="flex mt-2 gap-4 flex-wrap justify-center md:justify-start">
+          {patientList.length > 0 ? (
+            patientList.map((pat) => <Card key={pat.id} {...pat} />)
+          ) : (
+            <p className="w-full p-2 font-semibold text-lg bg-gray-100 flex justify-center">
+              No Appointments
+            </p>
+          )}
         </div>
       </div>
     </div>
