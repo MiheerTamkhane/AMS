@@ -5,6 +5,7 @@ export const Footer = () => {
         <a
           className="w-6 h-6 cursor-pointer"
           href="https://github.com/MiheerTamkhane/"
+          rel="noreferrer"
           target="_blank"
         >
           <img src="/assests/svg/github.svg" alt="github" />
@@ -12,6 +13,7 @@ export const Footer = () => {
         <a
           className="w-6 h-6 cursor-pointer"
           href="https://www.linkedin.com/in/miheertamkhane"
+          rel="noreferrer"
           target="_blank"
         >
           <img src="/assests/svg/linkedin.svg" alt="linkedin" />
@@ -19,6 +21,7 @@ export const Footer = () => {
         <a
           className="w-6 h-6 cursor-pointer"
           href="https://twitter.com/MiheerTamkhane"
+          rel="noreferrer"
           target="_blank"
         >
           <img src="/assests/svg/twitter.svg" alt="twitter" />

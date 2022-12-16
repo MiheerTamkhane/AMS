@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { Card, DocCard } from "../components";
 import { usePatient } from "../contexts";
 export const PatientView = () => {
